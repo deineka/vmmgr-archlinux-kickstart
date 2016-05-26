@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<doc repository_subdir="beta">
+  <osname>Archlinux-2016.04-amd64</osname>
+  <support>
+    <elem version="5.45.0">VMmgr</elem>
+  </support>
+  <rebootcount>1</rebootcount>
+  <kernel>vmlinuz</kernel>
+  <initrd>archiso.img</initrd>
+  <type>ostemplate</type>
+  <sshpublickey>yes</sshpublickey>
+  <loader>pxelinux.0</loader>
+  <pxelinuxcfg>pxelinux.conf</pxelinuxcfg>
+  <tempipv4>yes</tempipv4>
+  <illegal_password_characters>!@#$%^&amp;*()</illegal_password_characters>
+  <kernelcommand>lang=en_US keymap=us ip=($IPv4)::($GATEWAYv4):($NETMASKv4):($HOSTNAME):eth0:off dns=($NAMESERVER)  archiso_http_srv=http://217.12.200.200/archboot/ script=($OSINSTALLINFO_HTTPv4)</kernel
+command>
+  <installcfg>install.cfg</installcfg>
+  <virtiodisk>yes</virtiodisk>
+  <virtionet>yes</virtionet>
+  <limit>
+    <elem name="ipv4">yes</elem>
+    <elem name="ipv6">yes</elem>
+    <elem name="mem">256</elem>
+    <elem name="disk">2000</elem>
+  </limit>
+  <macro>
+    <elem name="($MIRROR)">http://mirror.yandex.ru/archlinux</elem>
+  </macro>
+  <up_mem_on_install>1024</up_mem_on_install>
+    <chpasswd_method>mount.linux</chpasswd_method>
+  <date>2015-11-16 07:55:11</date>
+  <install_result>ok</install_result>
+</doc>
